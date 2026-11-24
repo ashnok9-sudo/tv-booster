@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="32dp">
+
+    <!-- Left Side: Status & Stats Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TV Memory &amp; Cooler"
+                android:textColor="@color/text_white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/ready_status"
+                android:textColor="@color/text_muted"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="20dp"
+                android:background="#2E3440" />
+
+            <TextView
+                android:id="@+id/text_ram_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available RAM: Calculating..."
+                android:textColor="@color/accent_green_focused"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_apps_stopped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Background Apps: Active"
+                android:textColor="@color/text_muted"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Right Side: Big D-Pad Action Buttons -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_boost"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/button_purple_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusDown="@+id/btn_boost_launch"
+            android:text="@string/boost_button"
+            android:textColor="@color/text_white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_boost_launch"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_green_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusUp="@+id/btn_boost"
+            android:text="@string/boost_launch_nuvio"
+            android:textColor="@color/text_white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
